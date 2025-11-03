@@ -554,7 +554,7 @@
 
     @keyframes floating-text {
         0% {
-            left: 25px;
+            left: 30%;
         }
 
         50% {
