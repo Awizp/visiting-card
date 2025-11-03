@@ -490,11 +490,13 @@
     }
 
     .footer_container .layout_container .footer_grid .footer_link p {
+        font-size: var(--fontsize-20);
+        font-weight: 600;
         text-transform: uppercase;
         position: absolute;
         left: 25px;
         top: 50%;
-        transform: translateY(-80%);
+        transform: translateY(-100%);
         opacity: 0;
         text-wrap: nowrap;
         animation: floating-text 30s linear infinite;
@@ -509,7 +511,7 @@
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -519,7 +521,7 @@
     }
 
     .footer_container .layout_container .footer_grid .footer_link div .footer_icon {
-        font-size: var(--fontsize-20);
+        font-size: var(--fontsize-24);
     }
 
     .footer_container .layout_container .footer_grid .footer_link:nth-child(1) {
@@ -537,18 +539,19 @@
     .footer_container .layout_container .footer_grid .footer_link:nth-child(3) {
         grid-column: 3/-1;
         grid-row: 1/2;
-        background-color: var(--color-tertiary);
+        background-color: var(--color-secondary);
     }
 
     .footer_container .layout_container .footer_grid .footer_link:nth-child(4) {
         grid-column: 2/-1;
         grid-row: 2/-1;
-        background-color: var(--color-accent);
+        background-color: var(--color-primary);
+        color: var(--color-text);
     }
 
     @keyframes floating-text {
         0% {
-            left: -25px;
+            left: 25px;
         }
 
         50% {
@@ -556,7 +559,7 @@
         }
 
         100% {
-            left: -25px;
+            left: 25px;
         }
     }
 
