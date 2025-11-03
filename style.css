@@ -57,20 +57,20 @@
 
 @layer colors {
     :root {
-        --color-primary: hsl(258, 50%, 90%);
-        --color-secondary: hsl(258, 50%, 10%);
-        --color-tertiary: hsl(318, 80%, 20%);
-        --color-accent: hsl(198, 80%, 20%);
-        --color-aqua: hsl(198, 80%, 80%);
+        --color-primary: hsl(281, 50%, 10%);
+        --color-secondary: hsl(281, 50%, 90%);
+        --color-tertiary: hsl(341, 80%, 80%);
+        --color-accent: hsl(221, 80%, 80%);
 
-        --color-bg-dark: hsl(0 0% 90%);
-        --color-bg: hsl(0 0% 95%);
-        --color-bg-light: hsl(0 0% 100%);
-        --color-text: hsl(0 0% 5%);
-        --color-text-mute: hsl(0, 0%, 30%);
-        --color-border: hsl(0 0% 60%);
-        --border-card: 1px solid var(--bg);
-        --border-higlight: hsl(0 0 100%);
+        --color-bg-dark: hsl(0 0% 0);
+        --color-bg: hsl(0 0% 5%);
+        --color-bg-light: hsl(0 0% 10%);
+        --color-bg-bright: hsl(0 0% 15%);
+        --color-text: hsl(0 0% 95%);
+        --color-text-mute: hsl(0 0% 70%);
+        --color-border: hsl(0 0% 40%);
+        --border-card: 1px solid var(--color-border);
+        --border-highlight: hsl(0 0% 90%);
 
         --gradient: linear-gradient(0deg, var(--color-bg). var(--color-bg-light));
         --gradient-hover: linear-gradient(0deg, var(--color-bg) 95%, var(--color-bg-light));
@@ -139,7 +139,7 @@
         min-height: 100vh;
 
         font-family: var(--font-roboto);
-        background-color: var(--color-primary);
+        background-color: var(--color-bg-dark);
         position: relative;
         transition: .5s;
     }
@@ -229,7 +229,7 @@
 
 @layer navbar {
     .navbar_container {
-        background: hsla(198, 80%, 80%, .8);
+        background: var(--color-bg-dark);
         color: var(--color-text);
         box-shadow: var(--shadow-combine);
     }
@@ -242,7 +242,7 @@
     }
 
     .navbar_container div.layout_container .navbar_logo {
-        color: var(--color-secondary);
+        color: var(--color-text);
         text-shadow: var(--shadow-combine);
     }
 
@@ -253,8 +253,8 @@
         text-align: center;
         cursor: pointer;
 
-        color: var(--color-bg-light);
-        background-color: var(--color-accent);
+        color: var(--color-text);
+        background-color: var(--color-primary);
         border: var(--border-card);
         border-top: 1px solid var((--border-higlight));
         box-shadow: var(--shadow-light);
@@ -268,7 +268,7 @@
 
 @layer visiting-card {
     .visiting_card_container {
-        background: hsla(198, 80%, 80%, .5);
+        background: var(--color-bg);
         color: var(--color-text);
     }
 
@@ -289,7 +289,7 @@
         transition: all .3s ease;
         overflow: hidden;
 
-        background-color: var(--color-accent);
+        background-color: var(--color-bg-light);
         border: var(--border-card);
         border-top: 1px solid var(--border-higlight);
         box-shadow: var(--shadow-dark);
@@ -312,13 +312,12 @@
         align-items: center;
         justify-content: space-between;
         padding: 1rem;
-        background: var(--color-secondary);
+        background: var(--color-primary);
     }
 
     .card .card_profile .card_image {
         width: calc(115/16 *1rem);
         height: calc(115/16 *1rem);
-        box-shadow: var(--shadow-dark);
     }
 
     .card .card_profile .card_image img {
@@ -333,7 +332,7 @@
     }
 
     .card .card_profile .card_code p {
-        color: var(--color-primary);
+        color: var(--color-text-mute);
         text-transform: capitalize;
         height: fit-content;
     }
@@ -366,11 +365,11 @@
 
         border: var(--border-card);
         border-top: 1px solid var(--border-higlight);
-        background-color: var(--color-bg);
+        background-color: var(--color-bg-bright);
     }
 
     .card .card_details .card_title h2 {
-        color: var(--color-secondary);
+        color: var(--color-text);
         text-transform: uppercase;
     }
 
@@ -392,6 +391,7 @@
 
         background-color: var(--color-bg);
         border: var(--border-card);
+        border-top: 1px solid var(--border-higlight);
     }
 
     .card .card_details .card_skills p {
@@ -464,7 +464,7 @@
 
 @layer footer {
     .footer_container {
-        background: hsla(198, 80%, 80%, .8);
+        background: var(--color-bg-dark);
         color: var(--color-bg-light);
     }
 
